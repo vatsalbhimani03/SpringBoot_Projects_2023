@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean name="simpleinsurance"
+          init-method="initialization"
+          destroy-method="destroy"
+          class="co.pragra.learning.firstspringproject.pojo.SimpleInsurance"></bean>
+    <bean name="quoteGenerator" class="co.pragra.learning.firstspringproject.pojo.QuoteGenerator">
+        <constructor-arg name="name" value="Vatsal"></constructor-arg>
+        <constructor-arg name="insure" ref="simpleinsurance"></constructor-arg>
+<!--        <property name="postalCode" value="#{'L6Y5N9'}.substring(0,3)"></property>-->
+        <property name="postalCode" value="L6Y"></property>
+    </bean>
+</beans>
