@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    username: pmuser
+    password: pmuser
+    url: jdbc:mysql://localhost:3306/pmdb
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
