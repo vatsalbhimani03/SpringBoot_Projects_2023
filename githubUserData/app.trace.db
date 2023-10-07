@@ -1,0 +1,3 @@
+2023-10-07 12:34:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USER_DATA" not found (this database is empty); SQL statement:
+select userdata0_.id as id1_0_, userdata0_.avatar_url as avatar_u2_0_, userdata0_.company as company3_0_, userdata0_.login as login4_0_, userdata0_.name as name5_0_, userdata0_.public_repos as public_r6_0_ from user_data userdata0_ where userdata0_.login=? [42104-214]
