@@ -43,7 +43,7 @@ public class MovieApi {
     }
 
     @PostMapping("/movie/{id}/review")
-    public ResponseEntity<Review> addReview(@PathVariable("id") long movieId,@RequestBody Review review) throws MovieNotFoundException {
+    public ResponseEntity<Review> addReview(@PathVariable("id") long movieId, @RequestBody Review review) throws MovieNotFoundException {
         Optional<Movie> movieOptional= movieRepo.findById(movieId);
         Movie movie = movieOptional.orElseThrow(MovieNotFoundException::new);
 
@@ -52,6 +52,8 @@ public class MovieApi {
         movieRepo.save(movie);
         return ResponseEntity.status(HttpStatus.CREATED).body(save);
     }
+
+
 
 
 

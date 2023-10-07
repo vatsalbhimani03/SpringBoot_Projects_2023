@@ -45,6 +45,7 @@ public class StudentService {
     }
 
     public Student getStudentById(Integer id){
+
         return repo.findById(id).orElseGet(() -> new Student());
     }
 

@@ -25,7 +25,7 @@ public class GuestAPI {
     }
 
     @GetMapping("/api/guest")
-    public List<Guest> getALl(){
+    public List<Guest> getAll(){
         return repo.findAll();
     }
 
