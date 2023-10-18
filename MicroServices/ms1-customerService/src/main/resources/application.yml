@@ -1,0 +1,15 @@
+server:
+  port: 8061
+
+eureka:
+  client:
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhosgt:8051/eureka
+
+spring:
+  application:
+    name: CUSTOMERSERVICE
+
+
+
